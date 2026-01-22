@@ -22,6 +22,20 @@ Simple `C++` project for practice
 - [ ] draw flow chart
 - [ ] each major logic into separate files
 
+## Build and Run
+
+Compile with `g++`
+
+```sh
+g++ ./src/main.cpp -o ./build/main.exe
+```
+
+Run the executable
+
+```sh
+./build/main.exe
+```
+
 ---
 
 ### Happy Hacking 🎉
