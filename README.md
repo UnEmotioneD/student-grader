@@ -4,33 +4,35 @@ Simple `C++` project for practice
 
 ## What it does
 
-- Reads students information (name, number, scores)
-- Calculate total, average scores for each
-- Grade them from A to F
-- Reorder those via grade
-- Print the results in terminal and output a json file
+- Reads student information (name, number, scores)
+- Calculates total, average scores for each
+- Assign grades them from A to F
+- Reorders students by grade
+- Prints the results to the terminal and outputs a JSON file
 
 ---
 
 ## TODO List
 
-- [x] read file
-- [ ] calculate tot, avg
-- [ ] grade the scores
-- [ ] order via scores
-- [ ] save as json
-- [ ] draw flow chart
-- [ ] each major logic into separate files
+- [x] Read file
+- [x] Calculate total, average
+- [ ] Assign grades
+- [ ] Sort by score
+- [ ] Save output as JSON
+- [ ] Draw a flow chart
+- [ ] Split major logic into separate files
 
 ## Build and Run
 
-Compile with `g++`
+Compile with `g++`:
+
+> Create `build` directory first
 
 ```sh
 g++ ./src/main.cpp -o ./build/main.exe
 ```
 
-Run the executable
+Run the executable:
 
 ```sh
 ./build/main.exe
