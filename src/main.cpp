@@ -15,7 +15,7 @@ using std::string;
 
 class Student {
  public:
-    int no;
+    int num;
     string name;
     int kor;
     int eng;
@@ -43,7 +43,7 @@ int main() {
         int math = 0;
 
         istringstream iss(stdInfo);
-        iss >> student.no >> student.name >> kor >> eng >> math;
+        iss >> student.num >> student.name >> kor >> eng >> math;
 
         student.kor = kor;
         student.eng = eng;
