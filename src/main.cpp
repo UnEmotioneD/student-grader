@@ -28,32 +28,31 @@ class Student {
 
 int main() {
     // Read file
-    ifstream stdFile;
-    stdFile.open("./student_scores.txt");
+    ifstream studentFile;
+    studentFile.open("./student_scores.txt");
 
     // Create student class
     Student student;
     list<Student> students;
 
     // Assign contents of file to string variable
-    string stdInfo = "";
-    while (getline(stdFile, stdInfo)) {
-        int kor = 0;
-        int eng = 0;
-        int math = 0;
+    string studentInfo = "";
 
-        istringstream iss(stdInfo);
-        iss >> student.num >> student.name >> kor >> eng >> math;
+    // read from studentFile
+    // for each line
+    // assign it to stdudentInfo
+    while (getline(studentFile, studentInfo)) {
+        istringstream iss(studentInfo);
+        iss >> student.num >> student.name >> student.kor >> student.eng >>
+            student.math;
 
-        student.kor = kor;
-        student.eng = eng;
-        student.math = math;
-        student.tot = kor + eng + math;
+        student.tot = student.kor + student.eng + student.math;
         student.avg = static_cast<float>(student.tot) / 3;
 
         students.push_back(student);
+        studentInfo = "";
     }
-    stdFile.close();
+    studentFile.close();
 
     for (Student student : students) {
         cout << student.name << " - average score: " << student.avg << endl;
