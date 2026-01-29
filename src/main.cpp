@@ -33,7 +33,7 @@ int main() {
 
     // Create student class
     Student student;
-    list<Student> stdList;
+    list<Student> students;
 
     // Assign contents of file to string variable
     string stdInfo = "";
@@ -51,12 +51,12 @@ int main() {
         student.tot = kor + eng + math;
         student.avg = static_cast<float>(student.tot) / 3;
 
-        stdList.push_back(student);
+        students.push_back(student);
     }
     stdFile.close();
 
-    for (auto s : stdList) {
-        cout << s.name << " - average score: " << s.avg << endl;
+    for (Student student : students) {
+        cout << student.name << " - average score: " << student.avg << endl;
     }
 
     return 0;
