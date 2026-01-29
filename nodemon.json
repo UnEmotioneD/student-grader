@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ext": "cpp",
   "ignore": [],
-  "exec": "g++ ./src/main.cpp -o ./build/main.exe && ./build/main.exe",
+  "exec": "./execute.bash",
   "events": {
     "start": "clear"
   }
