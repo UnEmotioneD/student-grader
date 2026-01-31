@@ -2,7 +2,7 @@
   "watch": ["src"],
   "ext": "cpp",
   "ignore": [],
-  "exec": "./execute.bash",
+  "exec": "./execute.sh",
   "events": {
     "start": "clear"
   }
