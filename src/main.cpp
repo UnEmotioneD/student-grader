@@ -40,7 +40,7 @@ int main() {
 
     // read from studentFile
     // for each line
-    // assign it to stdudentInfo
+    // assign it to studentInfo
     while (getline(studentFile, studentInfo)) {
         istringstream iss(studentInfo);
         iss >> student.num >> student.name >> student.kor >> student.eng >>
