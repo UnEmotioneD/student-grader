@@ -56,16 +56,18 @@ int main() {
         iss >> student.num >> student.name >> student.kor >> student.eng >>
             student.math;
 
-        student.tot = student.kor + student.eng + student.math;
-        student.avg = static_cast<float>(student.tot) / 3;
-
+        // adds student object to students list
         students.push_back(student);
         studentInfo = "";
     }
     studentFile.close();
 
     for (Student student : students) {
-        cout << student.name << " - average score: " << student.avg << endl;
+        student.tot = student.kor + student.eng + student.math;
+        student.avg = static_cast<float>(student.tot) / 3;
+
+        cout << student.name << " - total score: " << student.tot
+             << ", average score: " << student.avg << endl;
     }
 
     return 0;
