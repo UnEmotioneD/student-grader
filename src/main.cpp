@@ -66,8 +66,22 @@ int main() {
         student.tot = student.kor + student.eng + student.math;
         student.avg = static_cast<float>(student.tot) / 3;
 
-        cout << student.name << " - total score: " << student.tot
-             << ", average score: " << student.avg << endl;
+        // assign grades by avg score
+        if (student.avg >= 90.0) {
+            student.grade = 'A';
+        } else if (student.avg >= 80.0) {
+            student.grade = 'B';
+        } else if (student.avg >= 70.0) {
+            student.grade = 'C';
+        } else if (student.avg >= 60.0) {
+            student.grade = 'D';
+        } else {
+            student.grade = 'F';
+        }
+
+        cout << student.name << " - total: " << student.tot
+             << " | average: " << student.avg << " | grade: " << student.grade
+             << endl;
     }
 
     return 0;

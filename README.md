@@ -14,7 +14,8 @@ Simple **C++** project to practice **OOP**.
 
 - [x] Read file
 - [x] Calculate total and average
-- [ ] Grade
+- [x] Grade
+- [ ] Print in table style
 - [ ] Sort
 - [ ] Output JSON
 - [ ] Refactor
