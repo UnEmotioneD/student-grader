@@ -26,7 +26,17 @@ class Student {
     int rank;
 };
 
+void clearTerm() {
+    // cross platform on modern OSs
+    cout << "\x1B[2J\x1B[H" << std::flush;
+    // \x1B[2J   : erase entire screen
+    // \x1B[H    : move cursor to top-left
+    // std:flush : force output buffer to write immediately
+}
+
 int main() {
+    clearTerm();
+
     // Read file
     ifstream studentFile;
     studentFile.open("./student_scores.txt");
