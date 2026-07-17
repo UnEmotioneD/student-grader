@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ext": "cpp",
+  "ignore": [],
+  "exec": "make && ./build/main",
+  "events": {
+    "start": "clear"
+  }
+}
