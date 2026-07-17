@@ -45,3 +45,20 @@ make
 
 ./build/main
 ```
+
+---
+
+## Clang Format
+
+[Clang LLVM Documentation](https://clang.llvm.org/docs/ClangFormatStyleOptions.html)
+
+### LLVM Style
+
+The default Clang Format style, using standard **C++** formatting conventions.
+
+- 2-space indent
+- 80 character line width
+
+### Space Indent
+
+Represents indent uniformly across all code blocks while `Tab` sometimes don't.
