@@ -2,16 +2,17 @@
 
 #include <fstream>
 #include <iostream>
-#include <list>
 #include <sstream>
 #include <string>
+#include <utility>
+#include <vector>
 
 using std::cout;
 using std::endl;
 using std::ifstream;
 using std::istringstream;
-using std::list;
 using std::string;
+using std::vector;
 
 class Student {
   public:
@@ -43,7 +44,7 @@ int main() {
 
     // Create student class
     Student student;
-    list<Student> students;
+    vector<Student> students;
 
     // Assign contents of file to string variable
     string studentInfo = "";
@@ -62,7 +63,8 @@ int main() {
     }
     studentFile.close();
 
-    for (Student student : students) {
+    // use reference to modify original values
+    for (Student &student : students) {
         student.tot = student.kor + student.eng + student.math;
         student.avg = static_cast<float>(student.tot) / 3;
 
@@ -82,6 +84,37 @@ int main() {
         cout << student.name << " - total: " << student.tot
              << " | average: " << student.avg << " | grade: " << student.grade
              << endl;
+    }
+
+    // sorting
+    int n = students.size();
+    bool swapped = false;
+    for (int j = 0; j < n - 1; j++) {
+        for (int k = 0; k < n - j - 1; k++) {
+            // high to low
+            if (students[k].tot < students[k + 1].tot) {
+                // Student tmp = students[k];
+                // students[k] = students[k + 1];
+                // students[k + 1] = tmp;
+
+                std::swap(students[k], students[k + 1]);
+                swapped = true;
+            }
+        }
+
+        if (swapped == false) {
+            break;
+        }
+    }
+
+    cout << "\n==============================" << endl;
+    cout << "Sorted" << endl;
+    cout << "==============================\n" << endl;
+
+    // use reference to get the original values
+    for (Student &student : students) {
+        cout << student.name << " - average: " << student.avg
+             << " | grade: " << student.grade << endl;
     }
 
     return 0;
