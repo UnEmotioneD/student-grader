@@ -9,6 +9,8 @@
 #include <utility>
 #include <vector>
 
+#include "terminal.h"
+
 using std::cerr;
 using std::cout;
 using std::endl;
@@ -34,43 +36,35 @@ class Student {
     int rank;
 };
 
-void clearTerm() {
-    // cross platform on modern OSs
-    cout << "\x1B[2J\x1B[H" << std::flush;
-    // \x1B[2J   : erase entire screen
-    // \x1B[H    : move cursor to top-left
-    // std:flush : force output buffer to write immediately
-}
-
 int main() {
-    clearTerm();
+    clear_term();
 
     // Create student class
     Student student;
     vector<Student> students;
 
     // Read file
-    ifstream studentFile;
+    ifstream student_file;
 
     try {
-        studentFile.open(student_scores);
-        if (!studentFile.is_open()) {
+        student_file.open(student_scores);
+        if (!student_file.is_open()) {
             throw runtime_error("Failed to open: " + student_scores);
         }
 
-        string studentInfo = "";
+        string student_info = "";
         // each line from file to studentInfo
-        while (getline(studentFile, studentInfo)) {
+        while (getline(student_file, student_info)) {
             // parse line into student fields using string stream
-            istringstream iss(studentInfo);
+            istringstream iss(student_info);
             iss >> student.num >> student.name >> student.kor >> student.eng >>
                 student.math;
 
             // adds student object to students list
             students.push_back(student);
-            studentInfo = "";
+            student_info = "";
         }
-        studentFile.close();
+        student_file.close();
 
         cout << "Successfully read: " << student_scores << endl;
     } catch (const exception &e) {
