@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "bubble_sort.h"
+#include "print_info.h"
 #include "student.h"
 #include "terminal.h"
 
@@ -54,7 +55,7 @@ int main() {
         }
         student_file.close();
 
-        cout << "Successfully read: " << student_scores << endl;
+        cout << "Successfully read: " << student_scores << "\n" << endl;
     } catch (const exception &e) {
         cerr << "Error: " << e.what() << endl;
     }
@@ -76,15 +77,11 @@ int main() {
         } else {
             student.grade = 'F';
         }
-
-        cout << student.name << " - total: " << student.tot
-             << " | average: " << student.avg << " | grade: " << student.grade
-             << endl;
     }
 
     bubble_sort_students(students);
 
-    print_student_info(students);
+    print_students_info(students);
 
     return 0;
 }

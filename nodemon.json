@@ -4,7 +4,7 @@
   ],
   "ext": "cpp",
   "ignore": [],
-  "exec": "make && ./build/main",
+  "exec": "make clean && make && ./build/main",
   "events": {
     "start": "clear"
   }

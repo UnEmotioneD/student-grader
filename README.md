@@ -17,6 +17,7 @@ Simple **C++** project to practice **OOP**.
 - [x] Grade
 - [ ] Print in table style
 - [x] Sort
+- [ ] Rank
 - [ ] Output JSON
 - [ ] Refactor
 - [ ] Draw flow chart

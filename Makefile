@@ -5,7 +5,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
 # variables
-SRC = src/main.cpp src/bubble_sort.cpp
+SRC = src/main.cpp src/bubble_sort.cpp src/print_info.cpp
 BUILD_DIR = build
 TARGET = $(BUILD_DIR)/main # output file
 
