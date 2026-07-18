@@ -1,18 +1,25 @@
 // Copyright (c) 2025 UnEmotioneD
 
+#include <exception>
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
 
+using std::cerr;
 using std::cout;
 using std::endl;
+using std::exception;
 using std::ifstream;
 using std::istringstream;
+using std::runtime_error;
 using std::string;
 using std::vector;
+
+string student_scores = "./student_scores.txt";
 
 class Student {
   public:
@@ -38,30 +45,37 @@ void clearTerm() {
 int main() {
     clearTerm();
 
-    // Read file
-    ifstream studentFile;
-    studentFile.open("./student_scores.txt");
-
     // Create student class
     Student student;
     vector<Student> students;
 
-    // Assign contents of file to string variable
-    string studentInfo = "";
+    // Read file
+    ifstream studentFile;
 
-    // read from studentFile
-    // for each line
-    // assign it to studentInfo
-    while (getline(studentFile, studentInfo)) {
-        istringstream iss(studentInfo);
-        iss >> student.num >> student.name >> student.kor >> student.eng >>
-            student.math;
+    try {
+        studentFile.open(student_scores);
+        if (!studentFile.is_open()) {
+            throw runtime_error("Failed to open: " + student_scores);
+        }
 
-        // adds student object to students list
-        students.push_back(student);
-        studentInfo = "";
+        string studentInfo = "";
+        // each line from file to studentInfo
+        while (getline(studentFile, studentInfo)) {
+            // parse line into student fields using string stream
+            istringstream iss(studentInfo);
+            iss >> student.num >> student.name >> student.kor >> student.eng >>
+                student.math;
+
+            // adds student object to students list
+            students.push_back(student);
+            studentInfo = "";
+        }
+        studentFile.close();
+
+        cout << "Successfully read: " << student_scores << endl;
+    } catch (const exception &e) {
+        cerr << "Error: " << e.what() << endl;
     }
-    studentFile.close();
 
     // use reference to modify original values
     for (Student &student : students) {
