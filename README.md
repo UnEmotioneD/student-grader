@@ -15,11 +15,12 @@ Simple **C++** project to practice **OOP**.
 - [x] Read file
 - [x] Calculate total and average
 - [x] Grade
-- [ ] Print in table style
 - [x] Sort
-- [ ] Rank
+- [x] Rank
+- [ ] Calculate class statistics
+- [ ] Print in table style
 - [ ] Output JSON
-- [ ] Refactor
+- [x] Refactor
 - [ ] Draw flow chart
 
 ---

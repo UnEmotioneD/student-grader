@@ -9,6 +9,7 @@
 #include "rank.h"
 #include "student.h"
 #include "terminal.h"
+#include "rank.h"
 
 std::vector<Student> students;
 
@@ -18,7 +19,7 @@ int main() {
     read_students_info(students);
     grade_students(students);
     bubble_sort_students(students);
-    // TODO: assign ranks
+    assign_ranks(students);
 
     print_students_info(students);
 
