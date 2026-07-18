@@ -17,6 +17,11 @@ int main() {
     clear_term();
 
     read_students_info(students);
+
+    if (students.empty()) {
+        return 0;
+    }
+
     grade_students(students);
     bubble_sort_students(students);
     assign_ranks(students);
