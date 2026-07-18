@@ -6,9 +6,9 @@
 #include <sstream>
 #include <stdexcept>
 #include <string>
-#include <utility>
 #include <vector>
 
+#include "bubble_sort.h"
 #include "student.h"
 #include "terminal.h"
 
@@ -82,36 +82,9 @@ int main() {
              << endl;
     }
 
-    // sorting
-    int n = students.size();
-    bool swapped = false;
-    for (int j = 0; j < n - 1; j++) {
-        for (int k = 0; k < n - j - 1; k++) {
-            // high to low
-            if (students[k].tot < students[k + 1].tot) {
-                // Student tmp = students[k];
-                // students[k] = students[k + 1];
-                // students[k + 1] = tmp;
+    bubble_sort_students(students);
 
-                std::swap(students[k], students[k + 1]);
-                swapped = true;
-            }
-        }
-
-        if (swapped == false) {
-            break;
-        }
-    }
-
-    cout << "\n==============================" << endl;
-    cout << "Sorted" << endl;
-    cout << "==============================\n" << endl;
-
-    // use reference to get the original values
-    for (Student &student : students) {
-        cout << student.name << " - average: " << student.avg
-             << " | grade: " << student.grade << endl;
-    }
+    print_student_info(students);
 
     return 0;
 }

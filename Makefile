@@ -5,7 +5,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
 # variables
-SRC = src/main.cpp
+SRC = src/main.cpp src/bubble_sort.cpp
 BUILD_DIR = build
 TARGET = $(BUILD_DIR)/main # output file
 
@@ -17,8 +17,9 @@ $(TARGET): $(SRC)
     # @: don't print command before execute
 	@mkdir -p $(BUILD_DIR)
     # $@: target being created
-    # $<: first dependency
-	$(CXX) $(CXXFLAGS) -o $@ $<
+    # $<: first dependency only
+    # $^: all dependencies
+	$(CXX) $(CXXFLAGS) -o $@ $^
     # expands to:
     # g++ -Wall -@extra -std=c++17 -o build/main src/main.cpp
 
