@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "bubble_sort.h"
+#include "grading.h"
 #include "print_info.h"
 #include "student.h"
 #include "terminal.h"
@@ -60,27 +61,8 @@ int main() {
         cerr << "Error: " << e.what() << endl;
     }
 
-    // use reference to modify original values
-    for (Student &student : students) {
-        student.tot = student.kor + student.eng + student.math;
-        student.avg = static_cast<float>(student.tot) / 3;
-
-        // assign grades by avg score
-        if (student.avg >= 90.0) {
-            student.grade = 'A';
-        } else if (student.avg >= 80.0) {
-            student.grade = 'B';
-        } else if (student.avg >= 70.0) {
-            student.grade = 'C';
-        } else if (student.avg >= 60.0) {
-            student.grade = 'D';
-        } else {
-            student.grade = 'F';
-        }
-    }
-
+    grade_students(students);
     bubble_sort_students(students);
-
     print_students_info(students);
 
     return 0;
