@@ -4,8 +4,8 @@ CXX = g++
 # compile using c++17 standard
 CXXFLAGS = -Wall -Wextra -std=c++17
 
-# variables
-SRC = src/main.cpp src/bubble_sort.cpp src/print_info.cpp
+# SRC = src/main.cpp src/bubble_sort.cpp src/print_info.cpp # dependencies
+SRC = $(wildcard src/*.cpp)
 BUILD_DIR = build
 TARGET = $(BUILD_DIR)/main # output file
 
