@@ -9,6 +9,7 @@
 #include <utility>
 #include <vector>
 
+#include "student.h"
 #include "terminal.h"
 
 using std::cerr;
@@ -22,19 +23,6 @@ using std::string;
 using std::vector;
 
 string student_scores = "./student_scores.txt";
-
-class Student {
-  public:
-    int num;
-    string name;
-    int kor;
-    int eng;
-    int math;
-    int tot;
-    float avg;
-    char grade;
-    int rank;
-};
 
 int main() {
     clear_term();
