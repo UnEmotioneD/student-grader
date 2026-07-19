@@ -5,4 +5,4 @@
 
 #include "student.h"
 
-void read_students_info(std::vector<Student> &students);
+bool read_students(std::vector<Student> &students);

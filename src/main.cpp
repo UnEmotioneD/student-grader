@@ -3,22 +3,19 @@
 #include <vector>
 
 #include "bubble_sort.h"
-#include "file_reader.h"
 #include "grading.h"
 #include "print_info.h"
 #include "rank.h"
+#include "reader.h"
 #include "student.h"
 #include "terminal.h"
-#include "rank.h"
 
 std::vector<Student> students;
 
 int main() {
     clear_term();
 
-    read_students_info(students);
-
-    if (students.empty()) {
+    if (!read_students(students)) {
         return 0;
     }
 

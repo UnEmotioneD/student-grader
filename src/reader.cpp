@@ -8,7 +8,7 @@
 #include <vector>
 
 #include "config.h"
-#include "file_reader.h"
+#include "reader.h"
 #include "student.h"
 
 using std::cerr;
@@ -19,8 +19,9 @@ using std::ifstream;
 using std::istringstream;
 using std::runtime_error;
 
-void read_students_info(std::vector<Student> &students) {
+bool read_students(std::vector<Student> &students) {
     ifstream ifs;
+    bool is_read = false;
 
     try {
         ifs.open(students_file);
@@ -44,8 +45,11 @@ void read_students_info(std::vector<Student> &students) {
         }
         ifs.close();
 
+        is_read = true;
         cout << "Successfully read: " << students_file << "\n" << endl;
     } catch (const exception &e) {
         cerr << "Error: " << e.what() << endl;
     }
+
+    return is_read;
 }
