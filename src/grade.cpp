@@ -4,6 +4,9 @@
 #include "grade.h"
 #include "student.h"
 
+using std::cout;
+using std::endl;
+
 void grade_students(std::vector<Student> &students) {
     // use reference to modify original values
     for (Student &student : students) {
@@ -24,5 +27,5 @@ void grade_students(std::vector<Student> &students) {
         }
     }
 
-    std::cout << "Grades assigned" << "\n" << std::endl;
+    cout << "Grades assigned" << "\n" << endl;
 }

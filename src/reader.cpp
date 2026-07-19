@@ -18,8 +18,9 @@ using std::exception;
 using std::ifstream;
 using std::istringstream;
 using std::runtime_error;
+using std::vector;
 
-bool read_students(std::vector<Student> &students) {
+bool read_students(vector<Student> &students) {
     ifstream ifs;
     bool is_read = false;
 

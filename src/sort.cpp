@@ -5,7 +5,12 @@
 #include "sort.h"
 #include "student.h"
 
-void bubble_sort(std::vector<Student> &students) {
+using std::cout;
+using std::endl;
+using std::swap;
+using std::vector;
+
+void bubble_sort(vector<Student> &students) {
     int n = students.size();
     bool swapped = false;
 
@@ -19,7 +24,7 @@ void bubble_sort(std::vector<Student> &students) {
                 // students[k] = students[k + 1];
                 // students[k + 1] = tmp;
 
-                std::swap(students[k], students[k + 1]);
+                swap(students[k], students[k + 1]);
                 swapped = true;
             }
         }
@@ -29,5 +34,5 @@ void bubble_sort(std::vector<Student> &students) {
         }
     }
 
-    std::cout << "Sorted high to low" << "\n" << std::endl;
+    cout << "Sorted high to low" << "\n" << endl;
 }

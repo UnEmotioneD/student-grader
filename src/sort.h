@@ -1,11 +1,13 @@
 #pragma once
 
-#include <vector>
-
-#include "student.h"
-
 // Declare interface
 //  to allow function call from main.cpp
 //  and implemented by sort.cpp
 
-void bubble_sort(std::vector<Student> &students);
+#include <vector>
+
+#include "student.h"
+
+using std::vector;
+
+void bubble_sort(vector<Student> &students);

@@ -4,4 +4,6 @@
 
 #include "student.h"
 
-void assign_ranks(std::vector<Student> &students);
+using std::vector;
+
+void assign_ranks(vector<Student> &students);
