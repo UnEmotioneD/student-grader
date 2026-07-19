@@ -8,4 +8,4 @@
 //  to allow function call from main.cpp
 //  and implemented by sort.cpp
 
-void bubble_sort_students(std::vector<Student> &students);
+void bubble_sort(std::vector<Student> &students);

@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "bubble_sort.h"
+#include "sort.h"
 #include "grading.h"
 #include "print_info.h"
 #include "rank.h"
@@ -20,7 +20,7 @@ int main() {
     }
 
     grade_students(students);
-    bubble_sort_students(students);
+    bubble_sort(students);
     assign_ranks(students);
 
     print_students_info(students);

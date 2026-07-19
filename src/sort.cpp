@@ -2,10 +2,10 @@
 #include <utility>
 #include <vector>
 
-#include "bubble_sort.h"
+#include "sort.h"
 #include "student.h"
 
-void bubble_sort_students(std::vector<Student> &students) {
+void bubble_sort(std::vector<Student> &students) {
     int n = students.size();
     bool swapped = false;
 
