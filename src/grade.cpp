@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "grading.h"
+#include "grade.h"
 #include "student.h"
 
 void grade_students(std::vector<Student> &students) {
@@ -24,5 +24,5 @@ void grade_students(std::vector<Student> &students) {
         }
     }
 
-    std::cout << "Grade assigned" << "\n" << std::endl;
+    std::cout << "Grades assigned" << "\n" << std::endl;
 }

@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "sort.h"
-#include "grading.h"
+#include "grade.h"
 #include "print_info.h"
 #include "rank.h"
 #include "reader.h"
