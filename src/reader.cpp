@@ -46,8 +46,12 @@ bool read_students(vector<Student> &students) {
         }
         ifs.close();
 
-        is_read = true;
-        cout << "Successfully read: " << students_file << "\n" << endl;
+        if (students.empty()) {
+            cerr << "Error: " << students_file << " is empty." << endl;
+        } else {
+            is_read = true;
+            cout << "Successfully read: " << students_file << "\n" << endl;
+        }
     } catch (const exception &e) {
         cerr << "Error: " << e.what() << endl;
     }
