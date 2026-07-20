@@ -25,9 +25,9 @@ bool read_students(vector<Student> &students) {
     bool is_read = false;
 
     try {
-        ifs.open(students_file);
+        ifs.open(STUDENTS_FILE);
         if (!ifs.is_open()) {
-            throw runtime_error("Failed to open: " + students_file);
+            throw runtime_error("Failed to open: " + STUDENTS_FILE);
         }
 
         Student student;
@@ -47,10 +47,10 @@ bool read_students(vector<Student> &students) {
         ifs.close();
 
         if (students.empty()) {
-            cerr << "Error: " << students_file << " is empty." << endl;
+            cerr << "Error: " << STUDENTS_FILE << " is empty." << endl;
         } else {
             is_read = true;
-            cout << "Successfully read: " << students_file << "\n" << endl;
+            cout << "Successfully read: " << STUDENTS_FILE << "\n" << endl;
         }
     } catch (const exception &e) {
         cerr << "Error: " << e.what() << endl;

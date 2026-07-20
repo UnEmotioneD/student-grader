@@ -2,4 +2,6 @@
 
 #include <string>
 
-const std::string students_file = "./students_scores.txt";
+using std::string;
+
+const string STUDENTS_FILE = "./students_scores.txt";
