@@ -21,11 +21,11 @@ $(TARGET): $(SRC)
     # $^: all dependencies
 	$(CXX) $(CXXFLAGS) -o $@ $^
     # expands to:
-    # g++ -Wall -@extra -std=c++17 -o build/main src/main.cpp
+    # g++ -Wall -Wextra -std=c++17 -o build/main src/main.cpp
 
-# run  on `make clean` command
+# runs on `make clean` command
 clean:
-	rm -rf $(BUILD_DIR)
+	@rm -rf $(BUILD_DIR)
 
 # phony == fake
 # run make command even if there is files named `all` or `clean`
