@@ -6,12 +6,14 @@
 
 using std::cout;
 using std::endl;
+using std::round;
 
 void grade_students(std::vector<Student> &students) {
     // use reference to modify original values
     for (Student &student : students) {
         student.tot = student.kor + student.eng + student.math;
-        student.avg = static_cast<float>(student.tot) / 3;
+        student.avg =
+            round((static_cast<float>(student.tot) / 3.0f) * 100.0f) / 100.0f;
 
         // assign grades by avg score
         if (student.avg >= 90.0) {
