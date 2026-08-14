@@ -15,9 +15,9 @@ void print_students_info(vector<Student> &students) {
          << endl;
 
     for (Student &student : students) {
-        cout << student.num << ' ' << student.name << "\t" << student.kor
-             << "\t" << student.eng << "\t" << student.math << "\t"
-             << student.tot << "\t" << student.avg << "\t" << student.grade
-             << "\t" << student.rank << endl;
+        cout << student.num << ' ' << student.name << ' ' << student.kor << ' '
+             << student.eng << ' ' << student.math << ' ' << student.tot
+             << ' ' << student.avg << ' ' << student.grade << ' '
+             << student.rank << endl;
     }
 }

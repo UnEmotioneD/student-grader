@@ -10,7 +10,8 @@
 #include "student.h"
 #include "terminal.h"
 
-// import standard library to current namespace for unqualified(without prefix) use
+// import standard library to current namespace for unqualified(without prefix)
+// use
 using std::vector;
 
 vector<Student> students;
