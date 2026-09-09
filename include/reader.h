@@ -5,6 +5,4 @@
 
 #include "student.h"
 
-using std::vector;
-
-bool read_students(vector<Student> &students);
+bool read_students(std::vector<Student> &students);

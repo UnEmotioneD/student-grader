@@ -5,6 +5,4 @@
 
 #include "student.h"
 
-using std::vector;
-
-void print_students_info(vector<Student> &students);
+void print_students_info(std::vector<Student> &students);

@@ -2,12 +2,10 @@
 
 #include <string>
 
-using std::string;
-
 class Student {
   public:
     int num;
-    string name;
+    std::string name;
     int kor;
     int eng;
     int math;

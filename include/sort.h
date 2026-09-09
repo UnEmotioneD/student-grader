@@ -8,6 +8,4 @@
 
 #include "student.h"
 
-using std::vector;
-
-void bubble_sort(vector<Student> &students);
+void bubble_sort(std::vector<Student> &students);
