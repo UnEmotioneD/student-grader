@@ -2,8 +2,8 @@
 #include <utility>
 #include <vector>
 
-#include "sort.h"
-#include "student.h"
+#include "../include/sort.h"
+#include "../include/student.h"
 
 using std::cout;
 using std::endl;

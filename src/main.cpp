@@ -2,13 +2,13 @@
 
 #include <vector>
 
-#include "grade.h"
-#include "print_info.h"
-#include "rank.h"
-#include "reader.h"
-#include "sort.h"
-#include "student.h"
-#include "terminal.h"
+#include "../include/grade.h"
+#include "../include/print_info.h"
+#include "../include/rank.h"
+#include "../include/reader.h"
+#include "../include/sort.h"
+#include "../include/student.h"
+#include "../include/terminal.h"
 
 // import standard library to current namespace for unqualified(without prefix)
 // use

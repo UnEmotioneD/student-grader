@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "print_info.h"
-#include "student.h"
+#include "../include/print_info.h"
+#include "../include/student.h"
 
 using std::cout;
 using std::endl;

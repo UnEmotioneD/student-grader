@@ -1,6 +1,6 @@
 #include <vector>
 
-#include "student.h"
+#include "../include/student.h"
 
 using std::vector;
 

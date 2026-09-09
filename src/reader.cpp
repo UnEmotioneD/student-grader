@@ -7,9 +7,9 @@
 #include <string>
 #include <vector>
 
-#include "config.h"
-#include "reader.h"
-#include "student.h"
+#include "../include/config.h"
+#include "../include/reader.h"
+#include "../include/student.h"
 
 using std::cerr;
 using std::cout;

@@ -2,8 +2,8 @@
 #include <math.h>
 #include <vector>
 
-#include "grade.h"
-#include "student.h"
+#include "../include/grade.h"
+#include "../include/student.h"
 
 using std::cout;
 using std::endl;
